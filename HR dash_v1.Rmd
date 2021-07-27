@@ -16,7 +16,7 @@ library(tidyverse)
 library(plotly)
 library(ggmap)
 
-devtools::install_github('rstudio/rmarkdown@3953abd473e9230faca4dcad996d5d1b35c3b3a7')
+# devtools::install_github('rstudio/rmarkdown@3953abd473e9230faca4dcad996d5d1b35c3b3a7')
 
 #Use knitr root.dir instead of setwd to set directory
 #It is not working
@@ -24,18 +24,18 @@ require(knitr)
 #opts_knit$set(root.dir = "C:\\CTS Learning\\02_CDO - Certified Data Analyst\\HR dashboard project\\Regional files")
 
 #Reading regional files
-americas=read_excel("C:\\DS\\CTS Learning\\02_CDO - Certified Data Analyst\\HR dashboard project\\Regional files\\HR Dashboard_v1 - Americas.xlsx",sheet = "data")
+americas=read_excel("~/GitHub/HR-Movement-Dashboard-using-Flexdashboard-/Regional files/HR Dashboard_v1 - Americas.xlsx",sheet = "data")
 
-apac=read_excel("C:\\DS\\CTS Learning\\02_CDO - Certified Data Analyst\\HR dashboard project\\Regional files\\HR Dashboard_v1 - APAC.xlsx",sheet = "data")
+apac=read_excel("~/GitHub/HR-Movement-Dashboard-using-Flexdashboard-/Regional files/HR Dashboard_v1 - APAC.xlsx",sheet = "data")
 
-europe=read_excel("C:\\DS\\CTS Learning\\02_CDO - Certified Data Analyst\\HR dashboard project\\Regional files\\HR Dashboard_v1 - Europe.xlsx",sheet = "data")
+europe=read_excel("~/GitHub/HR-Movement-Dashboard-using-Flexdashboard-/Regional files/HR Dashboard_v1 - Europe.xlsx",sheet = "data")
 
 
 #Consolidating global data
 global=rbind(americas,apac,europe)
 
 #Read file containing country coordinates
-country_coor=read_excel("C:\\DS\\CTS Learning\\02_CDO - Certified Data Analyst\\HR dashboard project\\R\\country coord.xlsx")
+country_coor=read_excel("~/GitHub/HR-Movement-Dashboard-using-Flexdashboard-/country coord.xlsx")
 
 ```
 
